@@ -10,8 +10,6 @@ import static org.testng.Assert.*;
 public class LoginTests extends DriverSetUp {
 
 
-    @BeforeClass
-
     @Test
     public void testSuccesfulLogin() {
         LoginPopUp loginPopUp = homePage.clickLoginButton1();
@@ -23,13 +21,13 @@ public class LoginTests extends DriverSetUp {
     }
 
     @Test
-    public void validateInvalidEmails() {
+    public void validateInvalidEmail() {
 
 
     }
 
     @Test
-    public void validateEmptyEmailsField() {
+    public void validateEmptyEmailField() {
         LoginPopUp loginPopUp = homePage.clickLoginButton1();
         loginPopUp.setUsername("");
 
@@ -37,17 +35,5 @@ public class LoginTests extends DriverSetUp {
         assertEquals("", "You must fill this field");
     }
 
-    @Test
-    public void validateEmptyNameField() {
-    }
-
-    @Test
-    public void validateConditions() {
-    }
-
-    @AfterClass
-    public void quitBrowser() {
-
-    }
 
 }
